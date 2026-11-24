@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101116"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="MyWeek">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><link rel="stylesheet" href="style.css"><title>MyWeek</title>
+</head>
+<body><main class="app">
+<header><div><small>DEIN PERSÖNLICHER PLANER</small><h1>MyWeek<span>.</span></h1></div><button class="icon" id="settings">⚙</button></header>
+<section class="hero"><small>DEIN ALLTAG, DEIN RHYTHMUS</small><h2>Mach Platz für<br><em>das, was zählt.</em></h2><p>Plane deine Woche. Gestalte deinen Tag.</p></section>
+<section class="panel"><div class="heading"><div><small>ÜBERSICHT</small><h3>Deine Woche</h3></div><div><button class="icon" id="prev">‹</button> <button class="icon" id="next">›</button></div></div><p class="muted" id="weekLabel"></p><div class="week" id="week"></div></section>
+<section class="panel"><div class="heading"><div><small>DEINE PLANUNG</small><h3 id="dateTitle">Tagesplan</h3></div><button class="primary" id="add">＋ Aufgabe</button></div><div class="progress"><div><i id="bar"></i></div><small id="count">0 / 0 erledigt</small></div><div id="tasks"></div><div class="empty" id="empty"><b>Noch nichts geplant</b><p>Füge deine erste Aufgabe hinzu und mach deinen Tag übersichtlich.</p><button class="primary" id="firstAdd">＋ Erste Aufgabe</button></div></section>
+<section class="reminder"><div class="bell">◷</div><div><b>Zeit für morgen?</b><small>Tägliche Planungserinnerung</small></div><strong id="reminderText">20:00</strong></section>
+<nav><button class="active" id="navWeek">▦<small>Woche</small></button><button id="navToday">☷<small>Heute</small></button><button id="navAdd">＋<small>Hinzufügen</small></button><button id="navSettings">⚙<small>Setup</small></button></nav>
+</main>
+<dialog id="taskDialog"><form id="taskForm"><div class="heading"><h3>Aufgabe planen</h3><button type="button" class="icon" data-close="taskDialog">×</button></div><label>Titel<input id="title" required maxlength="80" placeholder="z. B. Sport, Lernen, Einkaufen"></label><div class="two"><label>Uhrzeit<input id="time" type="time" value="09:00"></label><label>Datum<input id="date" type="date" required></label></div><label>Notiz (optional)<textarea id="note" rows="3" placeholder="Weitere Details ..."></textarea></label><button class="primary wide">Aufgabe speichern</button></form></dialog>
+<dialog id="settingsDialog"><form id="settingsForm"><div class="heading"><h3>Einstellungen</h3><button type="button" class="icon" data-close="settingsDialog">×</button></div><label>Erinnerung um<input id="reminder" type="time" value="20:00"></label><p class="muted">Hinweis: In dieser ersten Version kann die Erinnerung nur ausgelöst werden, solange MyWeek im Browser geöffnet ist. iOS-Web-Apps unterstützen keine zuverlässige tägliche Hintergrund-Erinnerung ohne zusätzliche Push-Infrastruktur.</p><button type="button" class="secondary wide" id="notify">Mitteilungen erlauben</button><p class="muted" id="notifyStatus"></p><button class="primary wide">Speichern</button><p class="muted">Deine Daten werden lokal in diesem Browser gespeichert.</p></form></dialog>
+<div class="toast" id="toast"></div><script src="app.js"></script>
+</body></html>
