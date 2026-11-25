@@ -1,6 +1,6 @@
-MYWEEK UPDATE – OHNE ERINNERUNG UND OHNE STARTKASTEN
+MYWEEK UPDATE INSTALLIEREN
 
-1. Entpacke MyWeek-ohne-Erinnerung-und-Startkasten.zip in der Dateien-App.
+1. Entpacke MyWeek-Update.zip in der Dateien-App.
 2. Öffne Safari und gehe zu https://github.com/Surxv/myweek/upload/main
 3. Lade ALLE Dateien aus diesem Ordner hoch (index.html, style.css, app.js, sw.js, manifest.webmanifest, icon-192.png, icon-512.png). Nicht den ZIP-Ordner selbst hochladen.
 4. Tippe auf Commit changes. GitHub Pages aktualisiert die Website danach automatisch.
@@ -12,5 +12,3 @@ DATEN: Die App verwendet weiterhin localStorage mit dem Schlüssel myweek.v1. Vo
 NEU: Kategorien/Farben, Kategorie-Filter, tägliche und wöchentliche Wiederholungen (Wochentage auswählbar), optionales Enddatum, Datenexport/-import.
 
 ERINNERUNGEN: Die einfache Erinnerung wird nur ausgelöst, während die App geöffnet ist. Zuverlässige Push-Mitteilungen bei geschlossener iPhone-Web-App benötigen einen Push-Server und Einrichtung von Web Push; das ist nicht in diesem statischen GitHub-Pages-Update enthalten.
-
-ZUSAETZLICH: Der obere Begruessungskasten „Mach Platz fuer das, was zaehlt.“ wurde entfernt.
